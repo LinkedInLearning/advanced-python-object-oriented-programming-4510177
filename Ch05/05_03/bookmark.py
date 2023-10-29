@@ -11,7 +11,7 @@ class Bookmark:
 
 
     def __post_init__(self):
-        if self.created == None:
+        if self.created is None:
             self.created = datetime.now(tz=UTC)
 
 b1 = Bookmark(

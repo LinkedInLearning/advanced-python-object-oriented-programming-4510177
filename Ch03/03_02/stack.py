@@ -15,7 +15,7 @@ class Stack(Sequence):
         self._head = Node(value, self._head)
 
     def pop(self):
-        if self._head == None:
+        if self._head is None:
             raise ValueError('pop from empty stack')
 
         value = self._head.value

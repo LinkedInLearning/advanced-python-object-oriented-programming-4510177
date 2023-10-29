@@ -26,9 +26,9 @@ class VM:
         if not self.id:
             raise ValueError('empty ID')
         if self.cpus < 1:
-            raise ValueError(f'cpus (self.cpus) < 1')
+            raise ValueError(f'cpus ({self.cpus}) < 1')
         if self.memory < 256:
-            raise ValueError(f'memory (self.memory) < 256')
+            raise ValueError(f'memory ({self.memory}) < 256')
 
 # %% test
 vm = VM(
