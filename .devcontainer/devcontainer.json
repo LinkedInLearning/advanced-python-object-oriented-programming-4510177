@@ -25,8 +25,7 @@
 	},
 	"extensions": [
 		"ms-python.python",
-		"ms-python.vscode-pylance",
-		"ms-toolsai.jupyter"
+		"ms-python.vscode-pylance"
 	],
 	"remoteUser": "vscode",
 	"onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc", //Set Terminal Prompt to $
