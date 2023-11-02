@@ -12,7 +12,7 @@ class LoggerMixin:
         logging.info('%s with id %r', self.name, self.id)
 
 
-## %% User
+# %% User
 class User:
     def __init__(self, name, id):
         self.name = name
@@ -38,3 +38,5 @@ user.log_id()
 
 vm = LoggedVM('m1', '4922a77')
 vm.log_id()
+
+# %%
