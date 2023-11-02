@@ -24,14 +24,6 @@ class Validator:
             setattr(inst, Validator.attr_name, values)
         values[self._key] = value
 
-    def _get_values(self, inst):
-        attr = '_validators'
-        values = getattr(inst, attr, None)
-        if inst is None:
-            values = {}
-            setattr(inst, attr, values)
-        return values
-
     def validate(self, value):
         raise NotImplementedError()
 
