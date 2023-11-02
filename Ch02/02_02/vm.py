@@ -1,4 +1,4 @@
-# VM
+# %% VM
 from random import choice
 
 adjectives = ['cool', 'funny', 'strong']

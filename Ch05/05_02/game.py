@@ -5,6 +5,7 @@ Room = namedtuple('Room', 'x y')
 
 r1 = Room(1, 2)
 print(r1)
+
 # %% Attributes
 print('len:', len(r1))
 print('x:', r1.x)

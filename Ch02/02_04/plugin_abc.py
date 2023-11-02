@@ -1,6 +1,6 @@
+# %% Plugin
 from abc import ABC, abstractmethod
 
-# Plugin
 
 class Plugin(ABC):
     @abstractmethod
