@@ -46,5 +46,5 @@ s = Stack()
 for c in 'Python':
     s.push(c)
 print('len:', len(s))
-print('s[2]:', s[1])
+print('s[2]:', s[2])
 print('t' in s)
