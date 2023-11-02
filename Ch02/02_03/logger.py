@@ -18,7 +18,7 @@ class User:
         self.name = name
         self.id = id
 
-## %% VM
+# %% VM
 class VM:
     def __init__(self, name, id):
         self.name = name
@@ -38,5 +38,3 @@ user.log_id()
 
 vm = LoggedVM('m1', '4922a77')
 vm.log_id()
-
-# %%

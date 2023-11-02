@@ -23,7 +23,7 @@ class User:
         login = auth.from_token(token)
         return cls(login)
 
-## %% Admin
+# %% Admin
 class Admin(User):
     ...  # TODO
     
