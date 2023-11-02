@@ -13,9 +13,9 @@ class TraceIDs(dict):
 
 # %% Test
 trace_ids = TraceIDs()
-print('calls:', trace_ids['http.calls'])
-print('calls:', trace_ids['http.calls'])
-print('errors:', trace_ids['http.errors'])
+print('calls ID:', trace_ids['http.calls'])
+print('calls ID:', trace_ids['http.calls'])
+print('errors ID:', trace_ids['http.errors'])
 
 
 # %%
@@ -23,6 +23,6 @@ from collections import defaultdict
 from itertools import count
 
 trace_ids = defaultdict(count(1).__next__)
-print('calls:', trace_ids['http.calls'])
-print('calls:', trace_ids['http.calls'])
-print('errors:', trace_ids['http.errors'])
+print('calls ID:', trace_ids['http.calls'])
+print('calls ID:', trace_ids['http.calls'])
+print('errors ID:', trace_ids['http.errors'])
