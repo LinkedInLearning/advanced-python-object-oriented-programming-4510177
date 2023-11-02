@@ -1,8 +1,8 @@
 # VM
 from random import choice
 
-names = ['bruce', 'carol', 'natasha']
 adjectives = ['cool', 'funny', 'strong']
+names = ['bruce', 'carol', 'natasha']
 
 
 class VM:
