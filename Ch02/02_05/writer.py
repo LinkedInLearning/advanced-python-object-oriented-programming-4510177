@@ -23,10 +23,10 @@ class S3File:
 
 
 # %% Test
-sink = S3File()
+out = S3File()
 obj = {
     'id': '007',
     'lat': 51.4871871,
     'lng': -0.1270605,
 }
-store_json(sink, obj)
+store_json(out, obj)
