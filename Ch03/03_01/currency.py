@@ -8,7 +8,7 @@ class Payment:
         self.currency = currency
 
     def __str__(self):
-        return f'{self.amount:.2f}{self.currency}'
+        return f'{self.currency}{self.amount:.2f}'
 
     def __repr__(self):
         name = self.__class__.__name__  # Support inheritance.
@@ -22,6 +22,8 @@ class Payment:
         raise ValueError(f'unknown format: {match.group()}')
 
     def __format__(self, spec):
+        if not spec:
+            return str(self)
         return re.sub(r'(?<!%)%([ac])', self._replace, spec)
 
 
@@ -29,7 +31,7 @@ class Payment:
 p = Payment(123.45, '£')
 
 # %% str
-print(f'payment of {p}')
+print(p)
 
 # %% repr
 print(f'p={p!r}')
