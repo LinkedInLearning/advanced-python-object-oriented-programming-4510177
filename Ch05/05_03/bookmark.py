@@ -9,7 +9,6 @@ class Bookmark:
     tags: list[str] = field(default_factory=list) 
     created: datetime = None
 
-
     def __post_init__(self):
         if self.created is None:
             self.created = datetime.now(tz=UTC)
