@@ -2,20 +2,23 @@
 serializers = {}  # media_type -> class
 
 
-def serializer(media_type):
-    def decorator(cls):
-        if (other := serializers.get(media_type)):
-            msg = f'{media_type} already registered to {other.__name__}'
+class serializer:
+    def __init__(self, media_type):
+        self.media_type = media_type
+    
+    def __call__(self, cls):
+        if (other := serializers.get(self.media_type)):
+            name = other.__name__
+            msg = f'{self.media_type} already registered to {name}'
             raise ValueError(msg)
-
+        
         dump = getattr(cls, 'dump', None)
         if not callable(dump):
-            raise ValueError(f'{cls.__name__} does not have a "dump" method')
-
-        serializers[media_type] = cls
+            name = cls.__name__
+            raise ValueError(f'{name} does not have a "dump" method')
+        
+        serializers[self.media_type] = cls
         return cls
-    return decorator
-
 
 def serialize(out, media_type, objects):
     cls = serializers.get(media_type)
