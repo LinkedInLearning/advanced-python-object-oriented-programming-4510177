@@ -20,10 +20,11 @@ class CheckerMeta(type):
         return type.__init__(cls, name, bases, mapping)
 
 
+# %% Checker
 class Checker(metaclass=CheckerMeta):
     pass
 
-
+# %% Robot
 class Robot(Checker):
     manufacture = 'BnL'
 
