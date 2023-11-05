@@ -1,8 +1,3 @@
-# Methods of class creation
-# __new__(mclas, name, bases, mapping) : Create new class
-# __init__(*args, **kw)                : Initialize the class
-# ... 
-
 # %%
 from datetime import datetime
 
